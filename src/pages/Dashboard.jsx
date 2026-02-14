@@ -135,11 +135,11 @@ export default function Dashboard() {
   };
 
   const handleResetDemo = () => {
-    if (!window.confirm('هل تريد إعادة ضبط بيانات الديمو؟')) return;
+    if (!window.confirm('هل تريد تحديث الصور والبيانات وإرجاعها للوضع الافتراضي؟')) return;
     resetDemoData();
     dispatch(getAllGalaries());
     dispatch(getAllServices());
-    setResetMessage('تمت إعادة ضبط بيانات الديمو بنجاح.');
+    setResetMessage('تم تحديث الصور والبيانات بنجاح.');
     window.setTimeout(() => setResetMessage(''), 2500);
   };
 
@@ -410,8 +410,9 @@ export default function Dashboard() {
                 <button
                   onClick={handleResetDemo}
                   className="px-6 py-2 rounded-lg bg-amber-500 text-white hover:bg-amber-600 transition-colors"
+                  title="تحديث الصور والبيانات"
                 >
-                  إعادة ضبط الديمو
+                  تحديث الصور
                 </button>
                 <button
                   onClick={handleLogout}

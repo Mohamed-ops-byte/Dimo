@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllServices } from '../Redux/Actions/servicesAction.jsx';
 import { getAllGalaries } from '../Redux/Actions/galeriesAction.jsx';
-import { resetDemoData } from '../data/demoStore.js';
 const heroImage = 'https://commons.wikimedia.org/wiki/Special:FilePath/All_pyramids_of_Giza_panorama_2.jpg';
 
 export default function Home() {
@@ -43,26 +42,8 @@ const galariesloading = useSelector((state) => state.allgalaries.loading);
     },
   ];
 
-  const handleResetData = () => {
-    resetDemoData();
-    window.location.reload();
-  };
-
   return (
     <div className="bg-gray-50">
-     {/* Reset Data Button */}
-     <div className="fixed top-20 left-4 z-50">
-       <button
-         onClick={handleResetData}
-         className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 transition-all"
-         title="Refresh data from file"
-       >
-         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-         </svg>
-         Refresh Images
-       </button>
-     </div>
      {/* top section */}
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
