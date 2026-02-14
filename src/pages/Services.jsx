@@ -52,6 +52,11 @@ export default function Services() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-accent-900/80 z-10" />
+        <div className="relative z-20 text-center text-white px-4 space-y-3">
+          <p className="inline-block px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm">Services • Visual Only</p>
+          <h1 className="text-5xl md:text-6xl font-bold">Explore Services</h1>
+          <p className="text-lg text-slate-100">Static layout with curated cards, gallery, and videos.</p>
+        </div>
       </section>
 
       <section className="section-padding bg-gray-50">
